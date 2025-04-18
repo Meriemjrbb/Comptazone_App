@@ -1,0 +1,38 @@
+ion-header {
+    --background: #3880ff; /* Primary color */
+    --color: white;
+  }
+  
+  .inscription-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    background: #ddf3fa;
+    text-align: center;
+  }
+  
+
+  
+  h1 {
+    font-size: 2rem;
+    color: #3e76d6; /* Primary color */
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  ion-item {
+    margin-bottom: 20px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" >
+      <ion-button (click)="goBack()" >
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Support Client</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding">
+  <ion-list class="message-list">
+    <ion-item *ngFor="let message of messages" class="message-item">
+      <ion-avatar slot="start" *ngIf="message.sender === 'Administration'">
+        <img [src]="message.avatar"/>
+      </ion-avatar>
+      <ion-label class="message-bubble" [ngClass]="{'admin': message.sender === 'Administration', 'client': message.sender === 'Client'}">
+        <h2>{{ message.sender }}</h2>
+        <p>{{ message.content }}</p>
+        <small>{{ message.timestamp }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-footer>
+    <form (ngSubmit)="sendMessage()">
+      <ion-item>
+        <ion-input [(ngModel)]="newMessage" name="newMessage" placeholder="Tapez votre message..." required></ion-input>
+      </ion-item>
+      <ion-button expand="full" shape="round" type="submit" color="secondary">
+        Envoyer
+      </ion-button>
+    </form>
+  </ion-footer>
+</ion-content>
