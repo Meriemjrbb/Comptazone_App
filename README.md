@@ -7,7 +7,7 @@ L’application vise à offrir une expérience simple de communication entre un 
 ## 🖼️ Aperçu de l’application
 
 ### 🏠 Accueil
-![Accueil](screenshots/accueil.png)
+![Accueil](screenshots/acceuil.png)
 
 ### 🔐 Connexion
 ![Connexion](screenshots/connexion.png)
